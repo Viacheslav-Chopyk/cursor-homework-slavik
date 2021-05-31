@@ -12,15 +12,15 @@ let profit = priceDiscount - (sumProduct / 2);
 
 document.querySelector('.price').innerHTML =
     (`<ol>
-    <li>Найбільше число: ${maxNum}</li>
-    <li>Найменше число: ${minNum}</li>
-    <li>Сума всіх товарів: ${sumProduct}</li>
-    <li>Сума всіх товарів округлена: ${sumProductFloor}</li>
-    <li>Сума округлена до сотень: ${(Math.ceil(sumProductFloor / 100)) * 100}</li>
-    <li>Чи парне число: ${sumProductFloor % 2 == 0}</li>
-    <li>Решта з 500 грн складає: ${(500 - sumProduct).toFixed(2)}</li>
-    <li>Середнє значення цін: ${((apple + banan + ananas) / 3).toFixed(2)}</li>
-    <li>Ваша знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
-    <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
-    <li>Чистий прибуток складає: ${profit.toFixed(2)}</li>
+    <ul>Найбільше число: ${maxNum}</ul>
+    <ul>Найменше число: ${minNum}</<ul>>
+    <ul>Сума всіх товарів: ${sumProduct}</<ul>>
+    <ul>Сума всіх товарів округлена: ${sumProductFloor}</ul>
+    <ul>Сума округлена до сотень: ${(Math.ceil(sumProductFloor / 100)) * 100}</ul>
+    <ul>Чи парне число: ${sumProductFloor % 2 == 0}</li>
+    <ul>Решта з 500 грн складає: ${(500 - sumProduct).toFixed(2)}</ul>
+    <ul>Середнє значення цін: ${((apple + banan + ananas) / 3).toFixed(2)}</ul>
+    <ul>Ваша знижка складає: ${(discount * 100).toFixed(0)}%!!!</ul>
+    <ul>Cума зі знижкою: ${priceDiscount.toFixed(2)}</ul>
+    <ul>Чистий прибуток складає: ${profit.toFixed(2)}</ul>
     </ol>`);
