@@ -18,7 +18,11 @@ document.querySelector('.price').innerHTML =
     <li>Чи парне число: ${sumProductFloor % 2 == 0}</li>
     <li>Решта з 500 грн складає: ${(500 - sumProduct).toFixed(2)}</li>
     <li>Середнє значення цін: ${((apple + banan + ananas) / 3).toFixed(2)}</li>
-    <li>Ваша знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
+    <li>Знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
     <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
     <li>Чистий прибуток складає: ${profit.toFixed(2)}</li>
+<<<<<<< HEAD
     </ul>`);
+=======
+    </ul>`);
+>>>>>>> 6ebdea696a950544bc3430d12533d75ea223996e
