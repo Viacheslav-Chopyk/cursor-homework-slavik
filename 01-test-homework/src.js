@@ -1,7 +1,5 @@
 const apple = 15.678, banan = 123.965, ananas = 90.2345
 
-
-
 let maxNum = Math.max(apple, banan, ananas);
 let minNum = Math.min(apple, banan, ananas);
 let sumProduct = apple + banan + ananas;
