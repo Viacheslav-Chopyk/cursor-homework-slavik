@@ -1,7 +1,5 @@
 const apple = 15.678, banan = 123.965, ananas = 90.2345
 
-
-
 let maxNum = Math.max(apple, banan, ananas);
 let minNum = Math.min(apple, banan, ananas);
 let sumProduct = apple + banan + ananas;
@@ -20,7 +18,7 @@ document.querySelector('.price').innerHTML =
     <li>Чи парне число: ${sumProductFloor % 2 == 0}</li>
     <li>Решта з 500 грн складає: ${(500 - sumProduct).toFixed(2)}</li>
     <li>Середнє значення цін: ${((apple + banan + ananas) / 3).toFixed(2)}</li>
-    <li>Ваша знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
+    <li>Знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
     <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
     <li>Чистий прибуток складає: ${profit.toFixed(2)}</li>
     </ul>`);
