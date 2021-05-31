@@ -11,7 +11,7 @@ let priceDiscount = sumProduct - (sumProduct * discount);
 let profit = priceDiscount - (sumProduct / 2);
 
 document.querySelector('.price').innerHTML =
-    (`<ol>
+    (`<ul>
     <li>Найбільше число: ${maxNum}</li>
     <li>Найменше число: ${minNum}</li>
     <li>Сума всіх товарів: ${sumProduct}</li>
@@ -23,4 +23,4 @@ document.querySelector('.price').innerHTML =
     <li>Ваша знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
     <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
     <li>Чистий прибуток складає: ${profit.toFixed(2)}</li>
-    </ol>`);
+    </ul>`);
