@@ -21,8 +21,4 @@ document.querySelector('.price').innerHTML =
     <li>Знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
     <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
     <li>Чистий прибуток складає: ${profit.toFixed(2)}</li>
-<<<<<<< HEAD
     </ul>`);
-=======
-    </ul>`);
->>>>>>> 6ebdea696a950544bc3430d12533d75ea223996e
