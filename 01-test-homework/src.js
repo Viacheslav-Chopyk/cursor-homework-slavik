@@ -16,7 +16,7 @@ document.querySelector('.price').innerHTML =
     <li>Сума всіх товарів округлена: ${sumProductFloor}</li>
     <li>Сума округлена до сотень: ${(Math.ceil(sumProductFloor / 100)) * 100}</li>
     <li>Чи парне число: ${sumProductFloor % 2 == 0}</li>
-    <li>Решта з 500 грн складає: ${(500 - sumProduct).toFixed(2)}</li>
+    <li>Решта з 500 грн складає: ${(500 - sumProduct)}</li>
     <li>Середнє значення цін: ${((apple + banan + ananas) / 3).toFixed(2)}</li>
     <li>Знижка складає: ${(discount * 100).toFixed(0)}%!!!</li>
     <li>Cума зі знижкою: ${priceDiscount.toFixed(2)}</li>
