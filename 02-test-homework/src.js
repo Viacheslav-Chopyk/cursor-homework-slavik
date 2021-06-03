@@ -27,5 +27,6 @@ for (n; n <= m; n++) {
     } else {
         sum += n;
     }
+    document.querySelector('.sumcount').innerHTML = sum;
 }
-console.log(sum);
+
