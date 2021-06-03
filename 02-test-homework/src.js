@@ -18,14 +18,18 @@ inputM();
 
 let addEvenNumber = confirm('Add Even numbers?');
 
-for (n; n <= m; n++) {
-    if (addEvenNumber) {
-        if (n % 2 === 0) {
-            continue;
+if(addEvenNumber){
+    for(let i= n; i<=m; i++){
+    sum +=i;
+    }return sum;
+}
+    else{
+        for(let i= n; i<=m; i++){
+            if(!(i%2==0)){
+            sum+=i;
+            }
+            return sum;
         }
-        sum += n;
-    } else {
-        sum += n;
     }
     document.querySelector('.sumcount').innerHTML = sum;
 }
