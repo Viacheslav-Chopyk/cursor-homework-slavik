@@ -10,8 +10,8 @@ function counter() {
 
     let skipNumbers = confirm('Do you want to skip even numbers?');
 
-    let minNumber = Math.min(n, m);
-    let maxNumber = Math.max(n, m);
+    const minNumber = Math.min(n, m);
+    const maxNumber = Math.max(n, m);
 
     for (minNumber; minNumber <= maxNumber; minNumber++) {
         if (skipNumbers && minNumber % 2 === 0) {
