@@ -8,7 +8,7 @@ function getMaxDigit(number) {
         return Math.max(number % 10, getMaxDigit(number / 10))
     }
 }
-//console.log(getMaxDigit(472658));
+console.log(getMaxDigit(472658));
 
 // Task 2 -----------------
 
