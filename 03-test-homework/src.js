@@ -111,4 +111,4 @@ function deleteDuplicateLetter(string) {
     }
     return newStr;
 }
-console.log(deleteDuplicateLetter("абабахаламага"));
+console.log(deleteDuplicateLetter("абабагаламага"));
