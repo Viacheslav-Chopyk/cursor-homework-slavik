@@ -100,3 +100,15 @@ console.log(palindromeChecker('кокос'));
 
 // 11 Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. 
 // Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
+
+function deleteDuplicateLetter(string) {
+    let newStr = '';
+    for (let i = 0; i < string.length; i++) {
+        const regExp = new RegExp(string[i], 'gi');
+        if (string.match(regExp).length <= 1) {
+            newStr += string[i];
+        }
+    }
+    return newStr;
+}
+console.log(deleteDuplicateLetter("абабахаламага"));
