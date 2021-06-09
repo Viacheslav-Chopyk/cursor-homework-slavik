@@ -54,6 +54,14 @@ console.log(getRandomNumber(1, 10));
 // Task 6 Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 //Приклад: countLetter("а", "Асталавіста") -> 4
 
+function countLetter(letter, str) {
+    let count = 0;
+    str.split('').forEach((el) => el.toLowerCase() == letter.toLowerCase() ? count++ : count);
+    return count;
+}
+
+console.log(countLetter('a', 'Асталавіста'));
+
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
