@@ -77,10 +77,10 @@ console.log(getRandomPassword(5));
 
 // Task 9 Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
-function deleteLetters(letter, string) {
-    if (letter.length !== 1)
+function deleteLetters(letters, string) {
+    if (letters.length !== 1)
         return false;
-    return string.replaceAll(letter, '');
+    return string.replaceAll(letters, '');
 }
 console.log(deleteLetters('a', 'blablabla'))
 
