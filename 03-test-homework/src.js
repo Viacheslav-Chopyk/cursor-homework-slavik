@@ -25,8 +25,8 @@ console.log(getPowOfNumber(2, 10));
 // Task 3 Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
 
 function ucFirst(str) {
-    if (!str) return str;
-
+    if (!str)
+        return str;
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
 console.log(ucFirst('sLaVik'));
