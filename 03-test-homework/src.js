@@ -60,7 +60,7 @@ function countLetter(letter, str) {
     return count;
 }
 
-console.log(countLetter('a', 'Асталавіста'));
+console.log(countLetter('а', 'Асталавіста'));
 
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
