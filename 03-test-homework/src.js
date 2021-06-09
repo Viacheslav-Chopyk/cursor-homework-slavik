@@ -89,7 +89,6 @@ function palindromeChecker(str) {
     }
     return true;
 }
-
 console.log(palindromeChecker('кокос'));
 
 // 11 Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. 
