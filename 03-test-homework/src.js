@@ -59,7 +59,6 @@ function countLetter(letter, str) {
     str.split('').forEach((el) => el.toLowerCase() == letter.toLowerCase() ? count++ : count);
     return count;
 }
-
 console.log(countLetter('а', 'Асталавіста'));
 
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
