@@ -32,7 +32,7 @@ function ucFirst(str) {
 console.log(ucFirst('sLaVik'));
 
 // Task 4 Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. 
-//(Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
+// (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 
 function getSumAfterTax(salary, rate) {
     let taxesCoefficient = (1 - rate / 100);
@@ -49,4 +49,48 @@ function getRandomNumber(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
-console.log(getRandomNumber(1, 10))
+console.log(getRandomNumber(1, 10));
+
+// Task 6 Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
+//Приклад: countLetter("а", "Асталавіста") -> 4
+
+// Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
+// Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
+
+function getRandomPassword(len) {
+    let password = " ";
+    let symbols = "0123456789";
+    for (let i = 0; i < len; i++) {
+        password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+    }
+    return password;
+}
+console.log(getRandomPassword(5));
+
+// Task 9 Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
+
+function deleteLetters(letter, string) {
+    if (letter.length !== 1)
+        return false;
+    return string.replaceAll(letter, '');
+}
+console.log(deleteLetters('a', 'blablabla'))
+
+// 10 Створіть функцію, яка перевіряє, чи є слово паліндромом. 
+//Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
+
+function palindromeChecker(str) {
+    str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+    const lastIndex = str.length - 1;
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[lastIndex - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(palindromeChecker('кокос'));
+
+// 11 Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. 
+// Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
