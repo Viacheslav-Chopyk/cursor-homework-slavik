@@ -45,8 +45,8 @@ console.log(getSumAfterTax(500, 19.5))
 // Приклад: getRandomNumber(1, 10) -> 5
 
 function getRandomNumber(min, max) {
-    let min = Math.ceil(min);
-    let max = Math.floor(max);
+    const min = Math.ceil(min);
+    const max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
 console.log(getRandomNumber(1, 10));
