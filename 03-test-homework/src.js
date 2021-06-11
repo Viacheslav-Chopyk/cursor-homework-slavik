@@ -2,14 +2,10 @@
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
 function getMaxDigit(number) {
-   if (number === "" || isNaN(number)) {
-        return 0;
-    }
-    else {
-        return Math.max(number % 10, getMaxDigit(number / 10))
-    }
+    return (isNaN(num) || num == '') ?
+        '' : Math.max(...num.split('').filter((item) => !isNaN(item)));
 }
-console.log(getMaxDigit(472658));
+console.log(getMaxDigit('trn754gf'));
 
 // Task 2 Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
