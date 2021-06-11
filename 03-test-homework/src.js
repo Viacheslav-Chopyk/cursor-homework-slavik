@@ -11,10 +11,17 @@ console.log(getMaxDigit('trn754gf'));
 
 function getPowOfNumber(x, n) {
     let result = 1;
-    for (let i = 0; i < n; i++) {
-        result = result * x;
+    if (n >= 0) {
+        for (let i = 0; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    } else if (n < 0) {
+        for (let i = 1; i <= -n; i++) {
+            result /= x;
+        }
+        return result;
     }
-    return result;
 }
 console.log(getPowOfNumber(2, 10));
 
