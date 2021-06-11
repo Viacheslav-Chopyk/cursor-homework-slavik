@@ -44,10 +44,10 @@ console.log(getSumAfterTax(500, 19.5))
 // Task 5 Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. 
 // Приклад: getRandomNumber(1, 10) -> 5
 
-function getRandomNumber(min, max) {
-    const min = Math.ceil(min);
-    const max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+function getRandomNumber(n, m) {
+    const min = Math.ceil(n);
+    const max = Math.floor(m);
+    return Math.floor(Math.random() * (m - n) + n);
 }
 console.log(getRandomNumber(1, 10));
 
