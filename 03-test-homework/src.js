@@ -65,7 +65,7 @@ console.log(countLetter('а', 'Асталавіста'));
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
 function getRandomPassword(len) {
-    let password = " ";
+    let password = "";
     let symbols = "0123456789";
     for (let i = 0; i < len; i++) {
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));
