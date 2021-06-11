@@ -2,8 +2,8 @@
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
 function getMaxDigit(number) {
-    return (isNaN(num) || num == '') ?
-        '' : Math.max(...num.split('').filter((item) => !isNaN(item)));
+    return (isNaN(number) || number == '') ?
+        '' : Math.max(...number.split('').filter((item) => !isNaN(item)));
 }
 console.log(getMaxDigit('trn754gf'));
 
