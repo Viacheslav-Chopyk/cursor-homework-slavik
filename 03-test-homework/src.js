@@ -2,7 +2,7 @@
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
 function getMaxDigit(number) {
-    if (number == 0) {
+   if (number === "" || isNaN(number)) {
         return 0;
     }
     else {
