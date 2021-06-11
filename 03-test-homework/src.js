@@ -87,7 +87,7 @@ console.log(deleteLetters('a', 'blablabla'))
 //Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
 
 function palindromeChecker(str) {
-    let str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+    const str2 = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
     const lastIndex = str.length - 1;
     for (let i = 0; i < str.length / 2; i++) {
         if (str[i] !== str[lastIndex - i]) {
