@@ -45,8 +45,8 @@ console.log(getSumAfterTax(500, 19.5))
 // Приклад: getRandomNumber(1, 10) -> 5
 
 function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+    let min = Math.ceil(min);
+    let max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
 console.log(getRandomNumber(1, 10));
@@ -87,7 +87,7 @@ console.log(deleteLetters('a', 'blablabla'))
 //Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
 
 function palindromeChecker(str) {
-    str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+    let str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
     const lastIndex = str.length - 1;
     for (let i = 0; i < str.length / 2; i++) {
         if (str[i] !== str[lastIndex - i]) {
