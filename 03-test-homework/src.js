@@ -10,6 +10,7 @@ while(number != 0){
   }
   return maxDigit.toString()[0];
 }
+console.log(getMaxDigit(6789));
 
 // Task 2 Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
