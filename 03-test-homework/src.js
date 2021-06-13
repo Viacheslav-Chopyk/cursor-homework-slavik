@@ -1,24 +1,32 @@
 // Task 1 Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. 
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
-function getMaxDigit(number) {
-    if (number == 0) {
-        return 0;
-    }
-    else {
-        return Math.max(number % 10, getMaxDigit(number / 10))
-    }
+function getMaxDigit(number){
+    maxDigit = 0;
+while(number != 0){
+    if((number % 10) > maxDigit)
+    maxDigit = (number % 10);
+    number = number / 10;
+  }
+  return maxDigit.toString()[0];
 }
-console.log(getMaxDigit(472658));
+console.log(getMaxDigit(6789));
 
 // Task 2 Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
 function getPowOfNumber(x, n) {
     let result = 1;
-    for (let i = 0; i < n; i++) {
-        result = result * x;
+    if (n >= 0) {
+        for (let i = 0; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    } else if (n < 0) {
+        for (let i = 1; i <= -n; i++) {
+            result /= x;
+        }
+        return result;
     }
-    return result;
 }
 console.log(getPowOfNumber(2, 10));
 
@@ -44,16 +52,17 @@ console.log(getSumAfterTax(500, 19.5))
 // Task 5 Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. 
 // Приклад: getRandomNumber(1, 10) -> 5
 
-function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+function getRandomNumber(n, m) {
+    const min = Math.ceil(n);
+    const max = Math.floor(m);
+    return Math.floor(Math.random() * (m - n) + n);
 }
 console.log(getRandomNumber(1, 10));
 
 // Task 6 Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 //Приклад: countLetter("а", "Асталавіста") -> 4
 
+<<<<<<< HEAD
 function countLetter() {
 
 }
@@ -66,26 +75,34 @@ function getCurrencyExange() {
 
 }
 console.log(getCurrencyExange())
+=======
+function countLetter(letter, str) {
+    let count = 0;
+    str.split('').forEach((el) => el.toLowerCase() == letter.toLowerCase() ? count++ : count);
+    return count;
+}
+console.log(countLetter('а', 'Асталавіста'));
+>>>>>>> e5890a63d9404fde8083c4be994e883217883c60
 
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
-function getRandomPassword(len) {
-    let password = " ";
+function getRandomPassword(len = 8) {
+    let password = "";
     let symbols = "0123456789";
     for (let i = 0; i < len; i++) {
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));
     }
     return password;
 }
-console.log(getRandomPassword(5));
+console.log(getRandomPassword());
 
 // Task 9 Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
-function deleteLetters(letter, string) {
-    if (letter.length !== 1)
+function deleteLetters(letters, string) {
+    if (letters.length !== 1)
         return false;
-    return string.replaceAll(letter, '');
+    return string.replaceAll(letters, '');
 }
 console.log(deleteLetters('a', 'blablabla'))
 
@@ -93,7 +110,7 @@ console.log(deleteLetters('a', 'blablabla'))
 //Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
 
 function palindromeChecker(str) {
-    str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+    const str2 = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
     const lastIndex = str.length - 1;
     for (let i = 0; i < str.length / 2; i++) {
         if (str[i] !== str[lastIndex - i]) {
@@ -106,3 +123,15 @@ console.log(palindromeChecker('кокос'));
 
 // 11 Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. 
 // Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
+
+function deleteDuplicateLetter(string) {
+    let newStr = '';
+    for (let i = 0; i < string.length; i++) {
+        const regExp = new RegExp(string[i], 'gi');
+        if (string.match(regExp).length <= 1) {
+            newStr += string[i];
+        }
+    }
+    return newStr;
+}
+console.log(deleteDuplicateLetter("абабагаламага"));
