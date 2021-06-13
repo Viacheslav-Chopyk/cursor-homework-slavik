@@ -46,7 +46,10 @@ console.log(setMarks(students));
 //  Task 4 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт(тут функція буде нечистою, але не повинна мутувати массив): [["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]
 
 function getRandomtMarks() {
-    const randomMarks = [];
-
+    const randomMark = devideThemes();
+    randomMark.forEach((item) => {
+        item.push(Math.ceil(Math.random() * 5));
+    });
+    return randomMark;
 }
 console.log(getRandomtMarks());
