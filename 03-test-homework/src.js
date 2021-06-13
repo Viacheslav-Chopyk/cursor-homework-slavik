@@ -1,11 +1,15 @@
 // Task 1 Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. 
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
-function getMaxDigit(number) {
-    return (isNaN(number) || number == '') ?
-        '' : Math.max(...number.split('').filter((item) => !isNaN(item)));
+function getMaxDigit(number){
+    maxDigit = 0;
+while(number != 0){
+    if((number % 10) > maxDigit)
+    maxDigit = (number % 10);
+    number = number / 10;
+  }
+  return maxDigit.toString()[0];
 }
-console.log(getMaxDigit('trn754gf'));
 
 // Task 2 Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
@@ -67,7 +71,7 @@ console.log(countLetter('а', 'Асталавіста'));
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
-function getRandomPassword(len) {
+function getRandomPassword(len = 8) {
     let password = "";
     let symbols = "0123456789";
     for (let i = 0; i < len; i++) {
@@ -75,7 +79,7 @@ function getRandomPassword(len) {
     }
     return password;
 }
-console.log(getRandomPassword(5));
+console.log(getRandomPassword());
 
 // Task 9 Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
