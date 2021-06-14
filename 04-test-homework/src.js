@@ -9,7 +9,7 @@ const marks = [4, 5, 5, 3, 4, 5];
 function getPairs(arr) {
     const sudentsPairs = [];
     sudentsPairs.push([arr[0], arr[2]]);
-    sudentsPairs.push([arr[1], arr[4]]);
+    sudentsPairs.push([arr[1], arr[3]]);
     sudentsPairs.push([arr[4], arr[5]]);
     return sudentsPairs;
 
