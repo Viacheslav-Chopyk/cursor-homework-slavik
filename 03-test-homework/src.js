@@ -1,14 +1,14 @@
 // Task 1 Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. 
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
-function getMaxDigit(number){
-    maxDigit = 0;
-while(number != 0){
-    if((number % 10) > maxDigit)
-    maxDigit = (number % 10);
-    number = number / 10;
-  }
-  return maxDigit.toString()[0];
+function getMaxDigit(number) {
+    let maxDigit = 0;
+    while (number != 0) {
+        if ((number % 10) > maxDigit)
+            maxDigit = (number % 10);
+        number = number / 10;
+    }
+    return maxDigit.toString()[0];
 }
 console.log(getMaxDigit(6789));
 
@@ -43,8 +43,8 @@ console.log(ucFirst('sLaVik'));
 // (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 
 function getSumAfterTax(salary, rate) {
-    let taxesCoefficient = (1 - rate / 100);
-    let revenue = salary * taxesCoefficient;
+    const taxesCoefficient = (1 - rate / 100);
+    const revenue = salary * taxesCoefficient;
     return revenue;
 }
 console.log(getSumAfterTax(500, 19.5))
@@ -62,27 +62,13 @@ console.log(getRandomNumber(1, 10));
 // Task 6 Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 //Приклад: countLetter("а", "Асталавіста") -> 4
 
-<<<<<<< HEAD
-function countLetter() {
-
-}
-console.log(countLetter("а", "Асталавіста"));
-
-// 7 Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$
-// Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
-
-function getCurrencyExange() {
-
-}
-console.log(getCurrencyExange())
-=======
 function countLetter(letter, str) {
     let count = 0;
     str.split('').forEach((el) => el.toLowerCase() == letter.toLowerCase() ? count++ : count);
     return count;
 }
 console.log(countLetter('а', 'Асталавіста'));
->>>>>>> e5890a63d9404fde8083c4be994e883217883c60
+
 
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
