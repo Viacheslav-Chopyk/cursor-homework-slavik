@@ -73,13 +73,10 @@ console.log(countLetter('а', 'Асталавіста'));
 // Task 8 Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
-function getRandomPassword(len = 8) {
-    let password = "";
-    let symbols = "0123456789";
-    for (let i = 0; i < len; i++) {
-        password += symbols.charAt(Math.floor(Math.random() * symbols.length));
-    }
-    return password;
+function getRandomPassword(lenPassword = 8) {
+    if (lenPassword > 10) lenPassword = 8;
+    lenPassword = lenPassword * (-1);
+    return Math.random().toString().slice(lenPassword);
 }
 console.log(getRandomPassword());
 
