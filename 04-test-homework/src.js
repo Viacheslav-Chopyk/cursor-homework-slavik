@@ -5,31 +5,31 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 // Task 1 Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом.
 // У вас повинен вийти вкладений масив з парами студентів: [["Олександр", "Олена"], [..], [...]];
+const girls = students.filter(student => student[student.length - 1] === 'а');
+const boys = students.filter(student => student[student.length - 1] !== 'а');
 
-function getPairs(arr) {
-    const sudentsPairs = [];
-    sudentsPairs.push([arr[0], arr[2]]);
-    sudentsPairs.push([arr[1], arr[3]]);
-    sudentsPairs.push([arr[4], arr[5]]);
-    return sudentsPairs;
-
+function getPairs(boys, girls) {
+    const studentsPairs = [];
+    for (let i = 0; i < boys.length; i++) {
+        studentsPairs[i] = [boys[i], girls[i]];
+    }
+    return studentsPairs;
 }
-console.log(getPairs(students));
+const studentsPairs = getPairs(boys, girls);
+console.log(studentsPairs);
 
 // Task 2 Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати. 
 // Повинен вийти вкладений масив виду: [["Олександр і Олена", "Теорія автоматів"], [...], [...]]
 
-function devideThemes() {
+function devideThemes(studentsPairs, themes) {
     const groups = [];
-    const pairs = getPairs(students);
-    pairs.forEach((item, index) => {
-        item = item.join(' i ');
-        groups.push([item, themes[index]]);
-    });
+    for (let i = 0; i < studentsPairs.length; i++) {
+        groups[i] = [studentsPairs[i].join(' i '), themes[i]];
+    }
     return groups;
-
 }
-console.log(devideThemes());
+const groups = devideThemes(studentsPairs, themes);
+console.log(groups);
 
 // Task 3 Зіставте оцінки(marks) зі студентом(students): [["Саша", 4], [...], [...]]
 
@@ -43,13 +43,14 @@ function setMarks(arr) {
 }
 console.log(setMarks(students));
 
-//  Task 4 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт(тут функція буде нечистою, але не повинна мутувати массив): [["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]
+// Task 4 Поставте кожній парі випадкову оцінку(від 1 до 5) за проєкт(тут функція буде нечистою, але не повинна мутувати массив): [["Олександр і Олена", "Теорія автоматів", 5], [...], [...]]
 
-function getRandomtMarks() {
-    const randomMark = devideThemes();
-    randomMark.forEach((item) => {
-        item.push(Math.ceil(Math.random() * 5));
-    });
-    return randomMark;
+function getRandomtMarks(team) {
+    const groupsMarks = [];
+    for (let i = 0; i < team.length; i++) {
+        groupsMarks[i] = [team[i], Math.ceil(Math.random() * 5)]
+    }
+    return groupsMarks;
 }
-console.log(getRandomtMarks());
+const groupsMarks = getRandomtMarks(groups);
+console.log(groupsMarks);
