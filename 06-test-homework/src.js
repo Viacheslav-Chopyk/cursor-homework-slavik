@@ -62,7 +62,7 @@ console.log(getAverageMark(students[0]));
 function getStudentInfo(students) {
     const { course, name } = students;
     const averageMark = getAverageMark(students);
-    return { course, name, averageMark };
+        return { course, name, averageMark };
 
 }
 console.log(getStudentInfo(students[0]));
@@ -75,7 +75,11 @@ console.log(getStudentsNames(students));
 // Task 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
 function getBestStudent(students) {
+    const maxAverage = Math.max(...students.map(student => getAverageMark(student)));
+    const bestStudents = [];
+        for (student of students) if (maxAverage === getAverageMark(student)) bestStudents.push(student.name);
 
+    return bestStudents;
 }
 console.log(getBestStudent(students));
 
