@@ -37,12 +37,12 @@ function getMySalary(){
         { const salary = 1500 + Math.random() * (2000 - 1500);
             const taxes = this.tax * salary;
             const profit = salary - taxes;
-            const res = {
+            const result = {
                 salary: salary,
                 taxes: taxes,
                 profit: profit,
             };
-            console.log(res);
+            console.log(result);
         }
         ,10000)
 }
