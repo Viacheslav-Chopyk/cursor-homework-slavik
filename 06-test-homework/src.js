@@ -62,7 +62,7 @@ console.log(getAverageMark(students[0]));
 function getStudentInfo(students) {
     const { course, name } = students;
     const averageMark = getAverageMark(students);
-        return { course, name, averageMark };
+    return { course, name, averageMark };
 
 }
 console.log(getStudentInfo(students[0]));
@@ -75,16 +75,36 @@ console.log(getStudentsNames(students));
 // Task 5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
 function getBestStudent(students) {
-    const maxAverage = Math.max(...students.map(student => getAverageMark(student)));
-    const bestStudents = [];
-        for (student of students) if (maxAverage === getAverageMark(student)) bestStudents.push(student.name);
+    let bestStudent = '';
+    let bigestMark = 0;
 
-    return bestStudents;
+    students.forEach(obj => {
+        
+        if (getAverageMark(obj) > bigestMark) {
+            bigestMark = getAverageMark(obj);
+            bestStudent = obj.name;
+        }
+    });
+
+    return bestStudent;
 }
 console.log(getBestStudent(students));
 
 // Task 6. Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 
-function calculateWordLetters(str) {
-
+function calculateWordLetters(string) {
+    let letters = string.split('');
+    let res = {};
+    letters.forEach( function(item){
+           if(item in res){
+                res[item] += 1;
+            }   
+            else{
+                res[item] = 1;
+            }
+    })
+    return res;
 }
+
+console.log(calculateWordLetters('тест'));
+
