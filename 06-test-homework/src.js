@@ -31,7 +31,7 @@ function getSubjects(students) {
     let listSubjects = Object.keys(students.subjects);
 
     listSubjects = listSubjects.map((item) => {
-        return item[0].toUpperCase() + item.slice(1).replaceAll("_", "-");
+        return item[0].toUpperCase() + item.slice(1).replaceAll("_", " ");
     });
 
     return listSubjects;
