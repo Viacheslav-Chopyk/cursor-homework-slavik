@@ -15,7 +15,7 @@ section {
     width: 250px;
     display: grid;
     grid-template-columns: repeat(5, 50px) ;
-    margin: 50px auto;
+    margin: 300px auto;
 }
 
 .blocks {
