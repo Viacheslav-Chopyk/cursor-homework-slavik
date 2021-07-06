@@ -27,19 +27,3 @@ section {
     height: 50px;
     transition: background-color .5s;
 }
-
-.btn {
-    height: 60px;
-    margin: 10px auto;
-    display: block;
-    background: green;
-    color: white;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 0 20px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-weight: 700;
-    transition: box-shadow 1s;
-}
