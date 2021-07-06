@@ -1,13 +1,13 @@
 class Student {
     constructor(university ,course ,fullName, marks = [5, 4, 4, 5] , isActive = true){
-        this.university = university,
-            this.course = course,
-            this.fullName = fullName,
-            this.marks = marks,
-            this.isActive = isActive
+        this.university = university;
+            this.course = course;
+            this.fullName = fullName;
+            this.marks = marks;
+            this.isActive = isActive;
     }
     get getInfo() {
-        return `Студент ${this.course}-го курсу ${this.university}, ${this.fullName}`
+        return `Студент ${this.course}-го курсу ${this.university}, ${this.fullName}`;
     }
     get getMarks(){
         return this.marks;
