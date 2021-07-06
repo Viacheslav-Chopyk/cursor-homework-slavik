@@ -1,6 +1,4 @@
 const blocks = document.querySelector('.blocks');
-//const btnSwitch = document.querySelector('.switch_on');
-//const btnShow = document.querySelector('.show');
 
 
 function getRandomColor() {
@@ -26,7 +24,6 @@ function generateBlocks() {
     }
 
     setColor();
-    btnShow.removeEventListener('click', generateBlocks);
 }
 
 function generateBlocksInterval() {
@@ -37,6 +34,5 @@ function generateBlocksInterval() {
     }, 15000);
 }
 
-//btnShow.addEventListener('click', generateBlocks);
-//btnSwitch.addEventListener('click', generateBlocksInterval);
+generateBlocks();
 generateBlocksInterval();
